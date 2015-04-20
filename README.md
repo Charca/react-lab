@@ -12,8 +12,8 @@ React and Flux training
 5. [Flux](#flux)
 6. [Routing](#routing)
 7. [Testing](#testing)
-8. React and ES6
-9. Final Exercise
+8. [React and ES6](#react-and-es6)
+9. [Final Exercise](#final-exercise)
 
 ## Introduction
 
@@ -147,7 +147,7 @@ Flux applications have three major parts: the **dispatcher**, the **stores**, an
 ### Exercises
 
 - [Complete the Flux Tutorial](https://facebook.github.io/flux/docs/todo-list.html#content) and build your first TODO App using React and Flux
-- Refactor the mail app you built in the previous chapter with the Flux architecture. Include at least one store and one action (for example, filtering the results using the "Enter keyboards" search box).
+- Refactor the Mail App you built in the previous chapter with the Flux architecture. Include at least one store and one action (for example, filtering the results using the "Enter keyboards" search box).
 
 ## Routing
 
@@ -162,8 +162,61 @@ In this chapter we're going to take a look at [react-router](https://github.com/
 
 ### Exercise
 
-Refactor your mail app to include routing. Each button on the left hand sidebar should route to a new section of the app (inbox, sent email, trash can). You don't have to provide any special functionallity to each section, but you can add a title to show the name of the section, or an "active" state to the buttons on the sidebar to provide some visual feedback.
+Refactor your Mail App to include routing. Each button on the left hand sidebar should route to a new section of the app (inbox, sent email, trash can). You don't have to provide any special functionallity to each section, but you can add a title to show the name of the section, or an "active" state to the buttons on the sidebar to provide some visual feedback.
 
 
 ## Testing
 
+There are several ways to test your React components, and you can use the framework you feel more comfortable with (Mocha, Jasmine, QUnit).
+
+Facebook provides its own framework for Unit Tests called [Jest](https://facebook.github.io/jest/), it's really easy to get started with and includes React and JSX support out of the box. We're gonna be using Jest here, but feel free to use the framework you want.
+
+React also comes with a very helpful set of helpers called React TestUtils, it's very useful for doing things like render a component and simulating DOM events.
+
+### Reading / watching material
+
+- [[Docs] Jest Getting Started](https://facebook.github.io/jest/docs/getting-started.html#content) - Learn how to get started with Jest in just a couple of minutes.
+- [[Docs] Jest Tutorial - React](https://facebook.github.io/jest/docs/tutorial-react.html) - Learn how to run Jest tests for your React Components.
+- [[Docs] React Test Utilities](https://facebook.github.io/react/docs/test-utils.html) - Read about the different React-specific actions you can take when testing React components (Framework independent).
+
+### Exercise
+
+Add Unit Tests to your Mail App using Jest and React TestUtils.
+
+
+## React and ES6
+
+Since version 0.13 of React, you can now use ES6 Classes to create your React components.
+
+What is ES6 you ask? ES6 (ECMAScript 6) is the upcoming new version of the ECMAScript language spec, that's the language commonly known as JavaScript. This version will see the light officially mid-2015, and of course it would take some time for browsers to implement all of its features (and even more time for users to update their browsers!). But the good news is that you can start using ES6 and take advantage of all the now goodies today.
+
+You React component can now look something like this:
+
+```javascript
+class HelloMessage extends React.Component {
+  render() {
+    return <div>Hello {this.props.name}</div>;
+  }
+}
+
+React.render(<HelloMessage name="Maxi" />, mountNode);
+```
+
+To do that, you have to use a transpiler (a piece of software that compiles your ES6 code to ES5, something that browsers of today can understand), and you have several options for that. React Tools comes with the JSX transpiler that will not only transform your JSX code to JavaScript, but also process your ES6 classes if you pass the optional argument `--harmony` when you call it.
+
+Another good option (not React specific) is [Babel](http://babeljs.io/), it supports a lot of features and it has great community support. We're going to use Babel for this course.
+
+### Reading / watching material
+
+- [[Docs] Learn ES6](http://babeljs.io/docs/learn-es6/) - Read about the new features of the language and think about the ones you can implement in your React application.
+- [[Docs] Using Babel](http://babeljs.io/docs/using-babel/) - Learn about how you can start using Babel from the Command Line or using your build system or task runner of choise.
+- [[Docs] React 0.13](https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html) - Read about the most important changes in React 0.13.
+
+### Exercise
+
+Refactor your Mail App to use ES6 classes, arrow functions, destructuring, modules, let, const, and pretty much every new feature you can think of.
+
+
+## Final Exercise
+
+TBD. Stay tuned!
