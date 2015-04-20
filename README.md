@@ -9,9 +9,9 @@ React and Flux training
 2. [React and JSX](#react-and-jsx)
 3. [Props and State](#props-and-state)
 4. [Thinking in React](#thinking-in-react)
-5. Flux
-6. Routing
-7. Testing
+5. [Flux](#flux)
+6. [Routing](#routing)
+7. [Testing](#testing)
 8. React and ES6
 9. Final Exercise
 
@@ -115,15 +115,55 @@ Use React thinking to build this simple mail app:
 
 ```
 [
-	{
-		name: 'Jonathan Doe',
-		text: 'Lorem ipsum dolor sit amet...',
-		status: 'online',
-		avatar_url: 'johndoe.png'
-	}
+  {
+    name: 'Jonathan Doe',
+    text: 'Lorem ipsum dolor sit amet...',
+    status: 'online',
+    avatar_url: 'johndoe.png'
+  }
 ]
 ```
 
 - Don't worry too much about the look and feel, just create a simple layout to display the information.
 - *Optional:* If you want to add a bit of functionallity, filter the results by typing into the "Enter keywords" text field. (Tips on how to do that in the Thinking in React video)
 - *Optional:* If you want to make it pixel perfect, you can download the free PSD [here](http://www.premiumpixels.com/freebies/mini-mail-application-psd/).
+
+
+## Flux
+
+Flux is the application architecture that Facebook uses for building client-side web applications. It complements React's composable view components by utilizing a unidirectional data flow. It's more of a pattern rather than a formal framework, and you can start using Flux immediately without a lot of new code.
+
+Flux applications have three major parts: the **dispatcher**, the **stores**, and the **views** (React components). These should not be confused with Model-View-Controller. Controllers do exist in a Flux application, but they are controller-views
+
+![Flux Structure](https://facebook.github.io/flux/img/flux-simple-f8-diagram-with-client-action-1300w.png)
+> Flux follows a unidirectional data flow.
+
+### Reading / watching material
+
+- [[Docs] Flux Overview](https://facebook.github.io/flux/docs/overview.html) - Read about how Flux works and how it can be implemented in your React app.
+- [[Video] React: Flux Architecture](https://egghead.io/series/react-flux-architecture) - Watch the first 5 lessons (the free ones) to learn how to create your first Flux app.
+- [[Blog] What is the Flux Application Architecture?](https://medium.com/brigade-engineering/what-is-the-flux-application-architecture-b57ebca85b9e) - Learn a bit more about the principles of Flux with a practical example.
+
+### Exercises
+
+- [Complete the Flux Tutorial](https://facebook.github.io/flux/docs/todo-list.html#content) and build your first TODO App using React and Flux
+- Refactor the mail app you built in the previous chapter with the Flux architecture. Include at least one store and one action (for example, filtering the results using the "Enter keyboards" search box).
+
+## Routing
+
+Routing is a very important part of any modern SPA. React doesn't come with a build-in routing solution, but there are [a number of different tools](https://github.com/facebook/react/wiki/Complementary-Tools#routing) you can choose to implement routing.
+
+In this chapter we're going to take a look at [react-router](https://github.com/rackt/react-router), a solution created by some folks from the Ember team.
+
+### Reading / watching material
+
+- [[Docs] React Router Guide](https://github.com/rackt/react-router/blob/master/docs/guides/overview.md) - Read the official guide to learn more about how to implement a router in your React, and how that helps to structure your components.
+- [[Video] react-router increases your productivity](https://www.youtube.com/watch?v=XZfvW1a8Xac) - Watch Michael Jackson, one of the core members of the React Router team talking about the insights of the library.
+
+### Exercise
+
+Refactor your mail app to include routing. Each button on the left hand sidebar should route to a new section of the app (inbox, sent email, trash can). You don't have to provide any special functionallity to each section, but you can add a title to show the name of the section, or an "active" state to the buttons on the sidebar to provide some visual feedback.
+
+
+## Testing
+
