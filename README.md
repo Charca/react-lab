@@ -217,8 +217,3 @@ Another good option (not React specific) is [Babel](http://babeljs.io/), it supp
 ### Exercise
 
 Refactor your Mail App to use ES6 classes, arrow functions, destructuring, modules, let, const, and pretty much every new feature you can think of.
-
-
-## Final Exercise
-
-TBD. Stay tuned!
