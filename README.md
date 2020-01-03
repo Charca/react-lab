@@ -3,8 +3,8 @@
 [![Join the chat at https://gitter.im/Charca/react-lab](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Charca/react-lab?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 React and Flux training
 
-> This is a very basic course that aims to gather some knowledge about the framework and how to quickly start using it.
-> It's very bare-bones for now, so if you wish to contribute with links, examples, wording or pretty much anything, please open an issue or a PR in this repository. Thanks for reading!
+> This course aims to gather foundational knowledge of the framework and how to quickly start using it.
+> If you wish to contribute with links, examples, wording or pretty much anything, please open an issue or a PR in this repository. Thanks for reading!
 
 ## Table of Contents
 1. [Introduction](#introduction)
